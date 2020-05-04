@@ -1,2 +1,4 @@
-﻿  The Apartment.cpp
+﻿  Button.cpp
+C:\Projects\TheApartment\The Apartment\The Apartment\Button.cpp(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\Button.cpp(13,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   The Apartment.vcxproj -> C:\Projects\TheApartment\The Apartment\Debug\The Apartment.exe
