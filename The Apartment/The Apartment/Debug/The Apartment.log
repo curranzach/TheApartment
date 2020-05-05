@@ -1,4 +1,77 @@
-﻿  Button.cpp
-C:\Projects\TheApartment\The Apartment\The Apartment\Button.cpp(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Projects\TheApartment\The Apartment\The Apartment\Button.cpp(13,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  StartScreen.cpp
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(17,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(24,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(24,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(88,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(88,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(152,72): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(152,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(159,72): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(159,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(162,78): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(162,72): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(166,71): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(166,65): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(170,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(170,67): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(174,70): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(174,64): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(178,69): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(178,63): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
   The Apartment.vcxproj -> C:\Projects\TheApartment\The Apartment\Debug\The Apartment.exe

@@ -10,7 +10,32 @@ void LoadTextures() {
     TextureManager::LoadTexture("backgroundImage");
     TextureManager::LoadTexture("title");
     TextureManager::LoadTexture("newGame");
-    TextureManager::LoadTexture("continue");
+    TextureManager::LoadTexture("newGameI");
+    // Tiles
+    TextureManager::LoadTexture("grassCenter");
+    TextureManager::LoadTexture("grassMid");
+    // Gray House
+    TextureManager::LoadTexture("houseGray");
+    TextureManager::LoadTexture("houseGrayBottomLeft");
+    TextureManager::LoadTexture("houseGrayBottomRight");
+    TextureManager::LoadTexture("houseGrayBottomMid");
+    TextureManager::LoadTexture("houseGrayMidLeft");
+    TextureManager::LoadTexture("houseGrayMidRight");
+    TextureManager::LoadTexture("houseGrayTopLeft");
+    TextureManager::LoadTexture("houseGrayTopMid");
+    TextureManager::LoadTexture("houseGrayTopRight");
+    TextureManager::LoadTexture("houseGrayAlt2");
+    TextureManager::LoadTexture("roofGreyMid");
+    TextureManager::LoadTexture("windowCheckered");
+    TextureManager::LoadTexture("doorKnob");
+    TextureManager::LoadTexture("doorTop");
+    // Characters
+    TextureManager::LoadTexture("chooseYourCharacter");
+    TextureManager::LoadTexture("curran_front"); TextureManager::LoadTexture("curran_stand");
+    TextureManager::LoadTexture("peterman_front"); TextureManager::LoadTexture("peterman_stand");
+    TextureManager::LoadTexture("wyatt_front"); TextureManager::LoadTexture("wyatt_stand");
+    TextureManager::LoadTexture("egan_front"); TextureManager::LoadTexture("egan_stand");
+    TextureManager::LoadTexture("Curran"); TextureManager::LoadTexture("peterman"); TextureManager::LoadTexture("wyatt"); TextureManager::LoadTexture("egan");
 }
 
 int main()
@@ -19,7 +44,7 @@ int main()
     sf::RenderWindow window;
     window.create(sf::VideoMode(1920,1080), "The Apartment");
     // Moves window left 13 pixels to fill screen
-    window.setPosition(sf::Vector2i(-13, 0));
+    window.setPosition(sf::Vector2i(-7, 0));
     // Load all textures
     LoadTextures();
     // Create StartScreen
@@ -27,35 +52,54 @@ int main()
 
     while (window.isOpen())
     {
+        // =================== Start Screen/Character Selection ===================
         if (!startScreen.GameStarted()) {
             startScreen.Display(window);
-        }
-        // Getting mouse position
-        sf::Mouse mouse;
-        auto pos = sf::Mouse::getPosition(window);
-        if (!startScreen.GameStarted()) {
-            startScreen.Hover(pos.x, pos.y);
-        }
-
-
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-            if (event.type == sf::Event::MouseButtonPressed) {
-                // LMB
-                if (event.mouseButton.button == sf::Mouse::Left) {
-                    // Get mouse position
-                    auto pos = sf::Mouse::getPosition(window);
-                    // If on starting screen
-                    if(!startScreen.GameStarted())
-                        startScreen.LeftClick(pos.x, pos.y);
+            // Check if mouse is hovering over buttons
+            sf::Mouse mouse;
+            auto pos = sf::Mouse::getPosition(window);  // Gets mouse position (x and y)
+            startScreen.Hover(pos.x, pos.y, window);
+            // Check for clicks on buttons
+            sf::Event event;
+            while (window.pollEvent(event))
+            {
+                if (event.type == sf::Event::Closed)
+                    window.close();
+                if (event.type == sf::Event::MouseButtonPressed) {
+                    // LMB
+                    if (event.mouseButton.button == sf::Mouse::Left) {
+                        // Get mouse position
+                        auto pos = sf::Mouse::getPosition(window);
+                        // If on starting screen
+                        if (!startScreen.GameStarted())
+                            startScreen.LeftClick(pos.x, pos.y);
+                    }
                 }
             }
+            window.display();
+            window.clear();
         }
-        window.display();
-        window.clear();
+        // =================== Game Started ===================
+        if (startScreen.GameStarted()) {
+            sf::Event event;
+            while (window.pollEvent(event))
+            {
+                if (event.type == sf::Event::Closed)
+                    window.close();
+                if (event.type == sf::Event::MouseButtonPressed) {
+                    // LMB
+                    if (event.mouseButton.button == sf::Mouse::Left) {
+                        // Get mouse position
+                        auto pos = sf::Mouse::getPosition(window);
+                        // If on starting screen
+                        if (!startScreen.GameStarted())
+                            startScreen.LeftClick(pos.x, pos.y);
+                    }
+                }
+            }
+            window.display();
+            window.clear();
+        }
   
     }
 

@@ -154,12 +154,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="StartScreen.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="The Apartment.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="StartScreen.h" />
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>

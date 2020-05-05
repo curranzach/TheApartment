@@ -2,23 +2,34 @@
 
 void Button::SetImage(const char* filename) {
 	this->filename = filename;
-	button.setTexture(TextureManager::GetTexture(filename));
+	buttonSprite.setTexture(TextureManager::GetTexture(filename));
 }
 
 void Button::Display(sf::RenderWindow& window) {
-	window.draw(button);
+	// Change to illuminated texture if button is illuminated
+	if (illuminated) {
+		string newFilename = filename + "I";
+		const char* c = newFilename.c_str(); // Adds I to end of filename to get illuminated version
+		buttonSprite.setTexture(TextureManager::GetTexture(c));
+	}
+	else { 
+		const char* c = filename.c_str();
+		buttonSprite.setTexture(TextureManager::GetTexture(c));
+	}
+	window.draw(buttonSprite);
 }
 
 void Button::SetPosition(int xPos, int yPos) {
-	button.setPosition(xPos, yPos);
+	buttonSprite.setPosition(xPos, yPos);
 }
 
 sf::Sprite& Button::GetSprite() {
-	return button;
+	return buttonSprite;
 }
 
 void Button::Illuminate() {
-	string newFilename = filename + "I";
-	const char* c = newFilename.c_str();
-	button.setTexture(TextureManager::GetTexture(c));
+	illuminated = true;
+}
+void Button::Deluminate() {
+	illuminated = false;
 }
