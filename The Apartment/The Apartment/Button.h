@@ -17,5 +17,7 @@ public:
 	void Illuminate();
 	void Deluminate();
 	sf::Sprite& GetSprite();
+	// Copy Assignment Operator
+	Button& operator=(Button& rhs);
 };
 

@@ -33,3 +33,11 @@ void Button::Illuminate() {
 void Button::Deluminate() {
 	illuminated = false;
 }
+
+Button& Button::operator=(Button& rhs) {
+	illuminated = rhs.illuminated;
+	locked = rhs.locked;
+	filename = rhs.filename;
+	buttonSprite = rhs.buttonSprite;
+	return *this;
+}

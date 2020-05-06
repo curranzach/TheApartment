@@ -30,6 +30,33 @@
     <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\DebugShape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\MapLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\MapLoaderPrivate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\MapLoaderPublic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\MapObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\miniz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\QuadTreeNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\pugixml\pugixml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TextureManager.h">
@@ -42,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SFML\tmxloader\sfml-tmxloader-master\src\miniz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

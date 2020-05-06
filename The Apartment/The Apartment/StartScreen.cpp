@@ -98,6 +98,10 @@ void StartScreen::CreateBuilding() {
 }
 
 void StartScreen::Display(sf::RenderWindow& window) {
+	//Check condition to stop showing startScreen
+	if (selectedCharacter.GetSprite().getPosition().x >= 1500) { // If selected character is at doors
+		enteredBuilding = true;
+	}
 	// ========== Always displayed ==========
 	// Draw bg
 	window.draw(background);
@@ -130,10 +134,39 @@ void StartScreen::Display(sf::RenderWindow& window) {
 	}
 	window.draw(doorTop);
 	// Display characters
-	curran.Display(window);
-	peterman.Display(window);
-	wyatt.Display(window);
-	egan.Display(window);
+	if (!characterSelected) {
+		curran.Display(window);
+		peterman.Display(window);
+		wyatt.Display(window);
+		egan.Display(window);
+	}
+	if (characterAssigned) { // Once a character has been chose, assign walking textures and make character move to door
+		selectedCharacter.Display(window);
+		sf::Time elapsed;
+		sf::Clock clock;
+		elapsed = clock.getElapsedTime();
+		if (selectedCharacter.GetSprite().getPosition().x < 1500) {
+			if (frameCount % 150 == 0) {
+				if (spriteChange % 2 == 0) {
+					if(curranSelected) { selectedCharacter.SetImage("p1_walk03"); }
+					if(petermanSelected) { selectedCharacter.SetImage("p4_walk03"); }
+					if (wyattSelected) { selectedCharacter.SetImage("p3_walk03"); }
+					if (eganSelected) { selectedCharacter.SetImage("p2_walk03"); }
+					spriteChange++;
+				}
+				else {
+					if (curranSelected) { selectedCharacter.SetImage("p1_walk01"); }
+					if (petermanSelected) { selectedCharacter.SetImage("p4_walk01"); }
+					if (wyattSelected) { selectedCharacter.SetImage("p3_walk01"); }
+					if (eganSelected) { selectedCharacter.SetImage("p2_walk01"); }
+					spriteChange++;
+				}
+			}
+			selectedCharacter.GetSprite().move(460000 * elapsed.asSeconds(), 0);
+			clock.restart();
+			frameCount++;
+		}
+	}
 	// ========================================
 
 	// Draw title and new game button if it hasn't been clicked yet
@@ -147,10 +180,35 @@ void StartScreen::Display(sf::RenderWindow& window) {
 	}
 }
 
-void StartScreen::LeftClick(int xPos, int yPos) {
+void StartScreen::LeftClick(int xPos, int yPos, sf::RenderWindow& window) {
 	// If player clicks on New Game button
 	if (newGame.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) { // If button's sprite is in pos of click
 		newGameClicked = true;
+	}
+	// If player selects curran
+	if (curran.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos)) && newGameClicked) { // If button's sprite is in pos of click
+		characterSelected = true;
+		curranSelected = true;
+		selectedCharacter = curran;
+		characterAssigned = true;
+	} // If player selects peterman
+	if (peterman.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos)) && newGameClicked) { 
+		characterSelected = true;
+		petermanSelected = true;
+		selectedCharacter = peterman;
+		characterAssigned = true;
+	}	 // If player selects wyatt
+	if (wyatt.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos)) && newGameClicked) { 
+		characterSelected = true;
+		wyattSelected = true;
+		selectedCharacter = wyatt;
+		characterAssigned = true;
+	} // If player selects egan
+		if (egan.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos)) && newGameClicked) { 
+		characterSelected = true;
+		eganSelected = true;
+		selectedCharacter = egan;
+		characterAssigned = true;
 	}
 }
 
@@ -162,21 +220,23 @@ void StartScreen::Hover(int xPos, int yPos, sf::RenderWindow& window) {
 	else if (!newGame.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) {
 		newGame.Deluminate();
 	}
-	// Check curran sprite
-	if (curran.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) {
-		ShowCharacterName("curran", window);
-	}
-	// Check peterman sprite
-	if (peterman.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) {
-		ShowCharacterName("peterman", window);
-	}
-	// Check wyatt sprite
-	if (wyatt.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) {
-		ShowCharacterName("wyatt", window);
-	}
-	// Check egan sprite
-	if (egan.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) {
-		ShowCharacterName("egan", window);
+	if (!characterSelected) {
+		// Check curran sprite
+		if (curran.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) {
+			ShowCharacterName("curran", window);
+		}
+		// Check peterman sprite
+		if (peterman.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) {
+			ShowCharacterName("peterman", window);
+		}
+		// Check wyatt sprite
+		if (wyatt.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) {
+			ShowCharacterName("wyatt", window);
+		}
+		// Check egan sprite
+		if (egan.GetSprite().getGlobalBounds().contains(sf::Vector2f(xPos, yPos))) {
+			ShowCharacterName("egan", window);
+		}
 	}
 }
 

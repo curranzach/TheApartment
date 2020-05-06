@@ -4,10 +4,13 @@
 #include <string>
 #include "TextureManager.h"
 #include "Button.h"
+#include "Player.h"
 
 class StartScreen
 {
 public:
+	int frameCount = 0;
+	int spriteChange = 0;
 	// Sprites
 	sf::Sprite background;
 	sf::Sprite title;
@@ -26,20 +29,23 @@ public:
 	bool enteredBuilding = false; // true when player walks into building
 	bool characterSelected = false; // true when player selects character
 	bool gameStarted = false; // true when all of the above are true
+	bool characterAssigned = false;
+	bool curranSelected; bool petermanSelected; bool wyattSelected; bool eganSelected; // true when that character is chosen
 	// Character Buttons (for selection)
 	Button curran;
 	Button peterman;
 	Button wyatt;
 	Button egan;
+	Button selectedCharacter;
 	// Constructors
 	StartScreen();
 	// Functions
 	void Display(sf::RenderWindow& window);
 	void CreateBuilding();
 	void ShowCharacterName(string character, sf::RenderWindow& window);
+	bool GameStarted(); // returns true to main when game has started
 	// Mouse Interactions
-	void LeftClick(int posX, int posY);
+	void LeftClick(int posX, int posY, sf::RenderWindow& window);
 	void Hover(int posX, int posY, sf::RenderWindow& window);
-	bool GameStarted();
 };
 

@@ -1,5 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <zLib\zlib.h>
+#include <tmx/MapLoader.hpp>
 #include "TextureManager.h"
 #include "Button.h"
 #include "StartScreen.h"
@@ -36,6 +38,14 @@ void LoadTextures() {
     TextureManager::LoadTexture("wyatt_front"); TextureManager::LoadTexture("wyatt_stand");
     TextureManager::LoadTexture("egan_front"); TextureManager::LoadTexture("egan_stand");
     TextureManager::LoadTexture("Curran"); TextureManager::LoadTexture("peterman"); TextureManager::LoadTexture("wyatt"); TextureManager::LoadTexture("egan");
+    // Curran walk
+    TextureManager::LoadTexture("p1_walk01"); TextureManager::LoadTexture("p1_walk03");
+    //Peterman walk
+    TextureManager::LoadTexture("p4_walk01"); TextureManager::LoadTexture("p4_walk03");
+    // Wyatt walk
+    TextureManager::LoadTexture("p3_walk01"); TextureManager::LoadTexture("p3_walk03");
+    // Egan walk
+    TextureManager::LoadTexture("p2_walk01"); TextureManager::LoadTexture("p2_walk03");
 }
 
 int main()
@@ -49,7 +59,10 @@ int main()
     LoadTextures();
     // Create StartScreen
     StartScreen startScreen;
-
+    // Load map
+    tmx::MapLoader ml("maps");
+    ml.load("test.tmx");
+    
     while (window.isOpen())
     {
         // =================== Start Screen/Character Selection ===================
@@ -72,7 +85,7 @@ int main()
                         auto pos = sf::Mouse::getPosition(window);
                         // If on starting screen
                         if (!startScreen.GameStarted())
-                            startScreen.LeftClick(pos.x, pos.y);
+                            startScreen.LeftClick(pos.x, pos.y, window);
                     }
                 }
             }
@@ -81,6 +94,7 @@ int main()
         }
         // =================== Game Started ===================
         if (startScreen.GameStarted()) {
+            window.draw(ml);
             sf::Event event;
             while (window.pollEvent(event))
             {
@@ -91,16 +105,12 @@ int main()
                     if (event.mouseButton.button == sf::Mouse::Left) {
                         // Get mouse position
                         auto pos = sf::Mouse::getPosition(window);
-                        // If on starting screen
-                        if (!startScreen.GameStarted())
-                            startScreen.LeftClick(pos.x, pos.y);
                     }
                 }
             }
             window.display();
             window.clear();
         }
-  
     }
 
     return 0;
