@@ -1,2 +1,136 @@
-﻿  pugixml.cpp
+﻿  StartScreen.cpp
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\DebugShape.hpp(41,60): warning C4275: non dll-interface class 'sf::Drawable' used as base for dll-interface class 'DebugShape'
+C:\SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\DebugShape.hpp(41): message : see declaration of 'DebugShape'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\DebugShape.hpp(42,1): warning C4275: non dll-interface class 'sf::Transformable' used as base for dll-interface class 'DebugShape'
+C:\SFML\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(41): message : see declaration of 'sf::Transformable'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\DebugShape.hpp(41): message : see declaration of 'DebugShape'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapObject.hpp(74,2): warning C4275: non dll-interface class 'sf::Transformable' used as base for dll-interface class 'tmx::MapObject'
+C:\SFML\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(41): message : see declaration of 'sf::Transformable'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapObject.hpp(73): message : see declaration of 'tmx::MapObject'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\QuadTreeNode.hpp(90,2): warning C4275: non dll-interface class 'sf::Drawable' used as base for dll-interface class 'tmx::QuadTreeRoot'
+C:\SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\QuadTreeNode.hpp(89): message : see declaration of 'tmx::QuadTreeRoot'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLayer.hpp(62,2): warning C4275: non dll-interface class 'sf::Drawable' used as base for dll-interface class 'tmx::LayerSet'
+C:\SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLayer.hpp(61): message : see declaration of 'tmx::LayerSet'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLayer.hpp(106,2): warning C4275: non dll-interface class 'sf::Drawable' used as base for dll-interface class 'tmx::MapLayer'
+C:\SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLayer.hpp(105): message : see declaration of 'tmx::MapLayer'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLoader.hpp(53,60): warning C4275: non dll-interface class 'sf::Drawable' used as base for dll-interface class 'tmx::MapLoader'
+C:\SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(45): message : see declaration of 'sf::Drawable'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLoader.hpp(53): message : see declaration of 'tmx::MapLoader'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLoader.hpp(54,2): warning C4275: non dll-interface class 'sf::NonCopyable' used as base for dll-interface class 'tmx::MapLoader'
+C:\SFML\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(41): message : see declaration of 'sf::NonCopyable'
+C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLoader.hpp(53): message : see declaration of 'tmx::MapLoader'
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(82,72): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(82,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(86,71): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(86,65): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(92,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(92,67): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(98,70): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(98,64): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(104,70): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(104,64): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(114,72): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(114,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(117,78): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(117,72): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(122,72): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(122,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(126,74): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(126,68): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(130,71): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(130,65): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(134,70): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Projects\TheApartment\The Apartment\The Apartment\StartScreen.cpp(134,64): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
   The Apartment.vcxproj -> C:\Projects\TheApartment\The Apartment\Debug\The Apartment.exe

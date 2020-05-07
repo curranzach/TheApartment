@@ -1,5 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <zLib\zlib.h>
+#include <tmx/MapLoader.hpp>
 #include <iostream>
 #include <string>
 #include "TextureManager.h"
@@ -15,13 +17,6 @@ public:
 	sf::Sprite background;
 	sf::Sprite title;
 	sf::Sprite chooseYourCharacter;
-	// Ground
-	sf::Sprite* grassTiles[28] = { nullptr };
-	sf::Sprite* dirtTiles[28 * 4] = { nullptr };
-	// Building
-	sf::Sprite* building[7][5];
-	sf::Sprite windows[4];
-	sf::Sprite doorTop;
 	// Buttons
 	Button newGame;
 	// Bools
@@ -41,7 +36,6 @@ public:
 	StartScreen();
 	// Functions
 	void Display(sf::RenderWindow& window);
-	void CreateBuilding();
 	void ShowCharacterName(string character, sf::RenderWindow& window);
 	bool GameStarted(); // returns true to main when game has started
 	// Mouse Interactions

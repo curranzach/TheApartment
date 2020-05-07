@@ -68,6 +68,7 @@ int main()
         // =================== Start Screen/Character Selection ===================
         if (!startScreen.GameStarted()) {
             startScreen.Display(window);
+            window.draw(ml);
             // Check if mouse is hovering over buttons
             sf::Mouse mouse;
             auto pos = sf::Mouse::getPosition(window);  // Gets mouse position (x and y)
@@ -94,7 +95,6 @@ int main()
         }
         // =================== Game Started ===================
         if (startScreen.GameStarted()) {
-            window.draw(ml);
             sf::Event event;
             while (window.pollEvent(event))
             {
