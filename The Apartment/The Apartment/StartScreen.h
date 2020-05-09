@@ -11,8 +11,7 @@
 class StartScreen
 {
 public:
-	int frameCount = 0;
-	int spriteChange = 0;
+	int walkingCounter = 0;
 	// Sprites
 	sf::Sprite background;
 	sf::Sprite title;
@@ -38,6 +37,7 @@ public:
 	void Display(sf::RenderWindow& window);
 	void ShowCharacterName(string character, sf::RenderWindow& window);
 	bool GameStarted(); // returns true to main when game has started
+	string GetPlayerName();
 	// Mouse Interactions
 	void LeftClick(int posX, int posY, sf::RenderWindow& window);
 	void Hover(int posX, int posY, sf::RenderWindow& window);

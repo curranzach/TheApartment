@@ -2,8 +2,7 @@
 
 // Initializes StartScreen
 StartScreen::StartScreen() {
-	// Set texture on bg and title sprites
-	background.setTexture(TextureManager::GetTexture("backgroundImage"));
+	// Set texture on title sprites
 	title.setTexture(TextureManager::GetTexture("title"));
 	// Set texture on newGame button
 	newGame.SetImage("newGame");
@@ -11,10 +10,10 @@ StartScreen::StartScreen() {
 	title.setPosition(450, 30);
 	newGame.SetPosition(700, 400);
 	// Character buttons
-	curran.SetImage("curran_front"); curran.SetPosition(200, 710);
-	peterman.SetImage("peterman_front"); peterman.SetPosition(400, 710);
-	wyatt.SetImage("wyatt_front"); wyatt.SetPosition(600, 710);
-	egan.SetImage("egan_front"); egan.SetPosition(800, 710);
+	curran.SetImage("curran_front"); curran.SetPosition(200, 750);
+	peterman.SetImage("peterman_front"); peterman.SetPosition(400, 750);
+	wyatt.SetImage("wyatt_front"); wyatt.SetPosition(600, 750);
+	egan.SetImage("egan_front"); egan.SetPosition(800, 750);
 	// Choose your character
 	chooseYourCharacter.setTexture(TextureManager::GetTexture("chooseYourCharacter"));
 	chooseYourCharacter.setPosition(175, 30);
@@ -23,12 +22,10 @@ StartScreen::StartScreen() {
 
 void StartScreen::Display(sf::RenderWindow& window) {
 	//Check condition to stop showing startScreen
-	if (selectedCharacter.GetSprite().getPosition().x >= 1500) { // If selected character is at doors
+	if (selectedCharacter.GetSprite().getPosition().x >= 1390) { // If selected character is at doors
 		enteredBuilding = true;
 	}
 	// ========== Always displayed ==========
-	// Draw bg
-	window.draw(background);
 
 	// Display characters
 	if (!characterSelected) {
@@ -38,32 +35,24 @@ void StartScreen::Display(sf::RenderWindow& window) {
 		egan.Display(window);
 	}
 	if (characterAssigned) { // Once a character has been chose, assign walking textures and make character move to door
-		selectedCharacter.Display(window);
-		sf::Time elapsed;
-		sf::Clock clock;
-		elapsed = clock.getElapsedTime();
-		if (selectedCharacter.GetSprite().getPosition().x < 1500) {
-			if (frameCount % 400 == 0) {
-				if (spriteChange % 2 == 0) {
-					if(curranSelected) { selectedCharacter.SetImage("p1_walk03"); }
-					if(petermanSelected) { selectedCharacter.SetImage("p4_walk03"); }
-					if (wyattSelected) { selectedCharacter.SetImage("p3_walk03"); }
-					if (eganSelected) { selectedCharacter.SetImage("p2_walk03"); }
-					spriteChange++;
-				}
-				else {
-					if (curranSelected) { selectedCharacter.SetImage("p1_walk01"); }
-					if (petermanSelected) { selectedCharacter.SetImage("p4_walk01"); }
-					if (wyattSelected) { selectedCharacter.SetImage("p3_walk01"); }
-					if (eganSelected) { selectedCharacter.SetImage("p2_walk01"); }
-					spriteChange++;
-				}
-			}
-			selectedCharacter.GetSprite().move(400000 * elapsed.asSeconds(), 0);
-			clock.restart();
-			frameCount++;
+		string temp = GetPlayerName();
+		if (walkingCounter < 15) {
+			temp += "_walk01";
+			const char* c = temp.c_str();
+			selectedCharacter.SetImage(c);
 		}
+		else {
+			temp += "_walk03";
+			const char* c = temp.c_str();
+			selectedCharacter.SetImage(c);
+		}
+		selectedCharacter.GetSprite().move(6, 0);
+		selectedCharacter.Display(window);
+		walkingCounter++;
+		if (walkingCounter == 30)
+			walkingCounter = 0;
 	}
+
 	// ========================================
 
 	// Draw title and new game button if it hasn't been clicked yet
@@ -167,4 +156,17 @@ bool StartScreen::GameStarted() {
 		return gameStarted;
 	}
 	return gameStarted;
+}
+
+string StartScreen::GetPlayerName() {
+	if (curranSelected)
+		return "curran";
+	if (petermanSelected)
+		return "peterman";
+	if (wyattSelected)
+		return "wyatt";
+	if (eganSelected)
+		return "egan";
+	else
+		return "null";
 }
