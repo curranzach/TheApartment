@@ -10,10 +10,10 @@ StartScreen::StartScreen() {
 	title.setPosition(450, 30);
 	newGame.SetPosition(700, 400);
 	// Character buttons
-	curran.SetImage("curran_front"); curran.SetPosition(200, 750);
-	peterman.SetImage("peterman_front"); peterman.SetPosition(400, 750);
-	wyatt.SetImage("wyatt_front"); wyatt.SetPosition(600, 750);
-	egan.SetImage("egan_front"); egan.SetPosition(800, 750);
+	curran.SetImage("curran_front"); curran.SetPosition(200, 744);
+	peterman.SetImage("peterman_front"); peterman.SetPosition(400, 744);
+	wyatt.SetImage("wyatt_front"); wyatt.SetPosition(600, 744);
+	egan.SetImage("egan_front"); egan.SetPosition(800, 744);
 	// Choose your character
 	chooseYourCharacter.setTexture(TextureManager::GetTexture("chooseYourCharacter"));
 	chooseYourCharacter.setPosition(175, 30);

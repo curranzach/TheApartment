@@ -111,8 +111,6 @@ int main()
                 playerCreated = true;
             }
             // Draw elements
-            window.draw(ml);
-            player.Display(window);
             while (window.pollEvent(event))
             {
                 if (event.type == sf::Event::Closed)
@@ -130,7 +128,15 @@ int main()
             } 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
                 player.Walk('l');
-            }
+            } 
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+                player.Jump();
+            } // REMOVE LATER
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+                player.Walk('d');
+            } // 
+            window.draw(ml);
+            player.Display(window);
             window.display();
             window.clear();
         }

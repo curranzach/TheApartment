@@ -8,17 +8,23 @@
 class Player
 {
 public:
-	sf::Vector2f hitBox[4]; //Array containing the 4 corners of the player sprite
+	// Collision
+	sf::Vector2f hitBox[4]; //Array containing the 4 sides of the player sprite
 	std::vector<tmx::MapLayer> layers;
-	// Add each of these points to the sprites current position
 	sf::Vector2f currentPosition;
-	int walkingCounter;
 	string playerName;
 	sf::Sprite playerSprite;
 	int hitPoints;
-	int movementSpeed = 10;
-	bool facingRight = true;
+	// Movement
+	int walkingCounter;
+	int movementSpeedRight = 10;
+	int movementSpeedLeft = 10;
+	bool facingRight = false;
 	bool moving = false;
+	// Air movement
+	int gravitySpeed = 6;
+	bool falling = false;
+	bool CheckIfFalling();
 	// Constructors
 	Player();
 	// Functions
@@ -27,6 +33,7 @@ public:
 	void SetSprite();
 	sf::Sprite& GetSprite();
 	void Walk(char direction);
+	void Fall();
 	void Animate(char direction);
 	void CheckCollision();
 	void Jump();

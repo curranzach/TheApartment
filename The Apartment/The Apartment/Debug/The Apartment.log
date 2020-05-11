@@ -23,6 +23,8 @@ C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLoader.hpp(53): message :
 C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLoader.hpp(54,2): warning C4275: non dll-interface class 'sf::NonCopyable' used as base for dll-interface class 'tmx::MapLoader'
 C:\SFML\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(41): message : see declaration of 'sf::NonCopyable'
 C:\SFML\tmxloader\sfml-tmxloader-master\include\tmx\MapLoader.hpp(53): message : see declaration of 'tmx::MapLoader'
-C:\Projects\TheApartment\The Apartment\The Apartment\Player.cpp(34,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Projects\TheApartment\The Apartment\The Apartment\Player.cpp(37,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\Player.cpp(44,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\Player.cpp(47,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\Player.cpp(50,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\TheApartment\The Apartment\The Apartment\Player.cpp(130,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   The Apartment.vcxproj -> C:\Projects\TheApartment\The Apartment\Debug\The Apartment.exe
